@@ -39,10 +39,17 @@ public class RestBoardController {
 		return mav;
 	}
 	
-	@GetMapping("/board/example")
-	 public List<BoardVO> example() {	
+	@GetMapping("/board/ajaxList")
+	public ModelAndView ajaxList(ModelAndView mav) {
+		mav.setViewName("rest/ajaxList");
+	
+		return mav;
+	}
+	
+	@GetMapping("/board/list")
+	public List<BoardVO> boardList() {	
 		 
-		 log.info("/board/example");		 
+		 log.info("/board/list");		 
 		 List<BoardVO> list = boardService.getList();		
 		 
 		 return list;
