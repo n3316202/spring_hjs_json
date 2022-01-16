@@ -1,6 +1,8 @@
-package edu.kosmo.ex;
+package edu.kosmo.ex.controller;
 
 import java.sql.SQLException;
+
+import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +18,10 @@ import lombok.extern.log4j.Log4j;
 @Controller
 public class TxTestController {	 
 
+	
+	 @Inject
 	 private TxTestService service;
-
+	 /*
 	 @GetMapping("/tx/{num}")
 	 public void transiotn(@PathVariable("num") int num) throws SQLException {
 		 	
@@ -44,5 +48,5 @@ public class TxTestController {
 				service.transionTest7();
 			}			 
 		 
-	 }	 
+	 }	*/ 
 }
