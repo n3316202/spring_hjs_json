@@ -1,4 +1,4 @@
-package edu.kosmo.ex;
+package edu.kosmo.ex.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
