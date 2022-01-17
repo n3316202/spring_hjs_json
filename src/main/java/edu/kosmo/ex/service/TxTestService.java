@@ -57,7 +57,7 @@ public class TxTestService {
 		mapper.insert(boardVO);
 	}
 
-	//@Transactional
+	@Transactional
 	public void transionTest3() {
 
 		log.info("transionTest3()테스트 ");
@@ -79,7 +79,7 @@ public class TxTestService {
 	}
 
 	//uncheckedExeption(롤백 함)
-	//@Transactional
+	@Transactional
 	public void transionTest4() {
 		BoardVO boardVO = new BoardVO();
 		boardVO.setBcontent("트랜잭션4");
@@ -92,7 +92,7 @@ public class TxTestService {
 	}
 
 	//CheckedExeption 테스트(롤백 안함)
-	//@Transactional
+	@Transactional
 	public void transionTest5() throws SQLException {
 		BoardVO boardVO = new BoardVO();
 		boardVO.setBcontent("트랜잭션5");
@@ -107,7 +107,7 @@ public class TxTestService {
 	//@Transactional의 rollbackFor 옵션을 이용하면 Rollback이 되는 클래스를 지정가능함.
 	// Exception예외로 롤백을 하려면 다음과 같이 지정하면됩니다. @Transactional(rollbackFor = Exception.class) 
 	// 여러개의 예외를 지정할 수도 있습니다. @Transactional(rollbackFro = {RuntimeException.class, Exception.class})
-	//@Transactional(rollbackFor = Exception.class) 
+	@Transactional(rollbackFor = Exception.class) 
 	public void transionTest6() throws SQLException {
 		BoardVO boardVO = new BoardVO();
 		boardVO.setBcontent("트랜잭션6");
@@ -119,7 +119,7 @@ public class TxTestService {
 		throw new SQLException("SQLException for rollback");
 	}
 	
-	//@Transactional(rollbackFor = SQLException.class) 
+	@Transactional(rollbackFor = SQLException.class) 
 	public void transionTest7() throws SQLException {
 		BoardVO boardVO = new BoardVO();
 		boardVO.setBcontent("트랜잭션7");

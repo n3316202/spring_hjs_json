@@ -50,7 +50,7 @@
 		base-package="edu.kosmo.ex.mapper" />
 
  	<context:component-scan
-		base-package="edu.kosmo.ex"></context:component-scan>
+		base-package="edu.kosmo.ex.service"></context:component-scan>
 		
 	<!-- <aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
 		

@@ -21,7 +21,7 @@ public class TxTestController {
 	
 	 @Inject
 	 private TxTestService service;
-	 /*
+	
 	 @GetMapping("/tx/{num}")
 	 public void transiotn(@PathVariable("num") int num) throws SQLException {
 		 	
@@ -48,5 +48,5 @@ public class TxTestController {
 				service.transionTest7();
 			}			 
 		 
-	 }	*/ 
+	 }	
 }
